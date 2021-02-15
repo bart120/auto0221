@@ -3,24 +3,24 @@
     <!--<span [textContent]="title"></span>-->
     <span>{{title}}</span>
   </div>
-  <a href="#" mat-button>
+  <a routerLink="/home" mat-button>
     <mat-icon>home</mat-icon>
     Accueil
   </a>
-  <a href="#" mat-button>
+  <a [routerLink]="['/car/list']" mat-button>
     <mat-icon>directions_car</mat-icon>
     Voitures
   </a>
-  <a href="#" mat-button>
+  <a routerLink="/car/add" mat-button>
     <mat-icon>add</mat-icon>
     Ajouter
   </a>
-  <a href="#" mat-button>
+  <a routerLink="/auth/login" mat-button>
     <mat-icon>locked_in</mat-icon>
     Connexion
   </a>
 </mat-toolbar>
 
-
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
