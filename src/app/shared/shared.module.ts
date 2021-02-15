@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
+import { MaterialModule } from '../material.module';
+
 
 @NgModule({
     declarations: [
@@ -10,8 +10,7 @@ import { MatCardModule } from '@angular/material/card';
     ],
     imports: [
         CommonModule,
-        MatGridListModule,
-        MatCardModule
+        MaterialModule
     ],
     exports: [
         FooterComponent
