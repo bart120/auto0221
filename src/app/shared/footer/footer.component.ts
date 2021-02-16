@@ -21,6 +21,9 @@ export class FooterComponent implements OnInit {
             { name: 'BMW', image: 'bmw.jpg' },
             { name: 'Audi', image: 'audi.jpg' }
         ];*/
-        this.marks = this.servMark.getMarks();
+        //this.marks = this.servMark.getMarks();
+        this.servMark.getMarks().subscribe(data => {
+            this.marks = data;
+        });
     }
 }
