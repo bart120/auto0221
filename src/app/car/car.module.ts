@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { AddComponent } from './add/add.component';
 import { DetailComponent } from './detail/detail.component';
+import { CarRoutingModule } from './routing-car.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { DetailComponent } from './detail/detail.component';
     DetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CarRoutingModule
   ]
 })
 export class CarModule { }
