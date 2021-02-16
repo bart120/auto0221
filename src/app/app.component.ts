@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { LOCALE_ID, Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'auto0221';
+
+  constructor(@Inject(LOCALE_ID) private locale: string) {
+
+  }
+
+  change(): void {
+    this.locale = 'es';
+  }
 }

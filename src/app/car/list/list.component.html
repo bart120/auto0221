@@ -8,9 +8,9 @@
         <th></th>
     </tr>
     <tr *ngFor="let car of cars">
-        <td>{{car.model}}</td>
-        <td>{{car.price}}</td>
-        <td>{{car.dateOfCirculation}}</td>
+        <td>{{car.model | uppercase}}</td>
+        <td>{{car.price | currency:'€'}}</td>
+        <td>{{car.dateOfCirculation | date:'long'}}</td>
         <td>
             <a mat-button>
                 <mat-icon>search</mat-icon>
