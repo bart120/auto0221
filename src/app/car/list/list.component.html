@@ -10,9 +10,9 @@
     <tr *ngFor="let car of cars">
         <td>{{car.model | uppercase}}</td>
         <td>{{car.price | currency:'€'}}</td>
-        <td>{{car.dateOfCirculation | date:'long'}}</td>
+        <td>{{car.dateOfCirculation | date:'short'}}</td>
         <td>
-            <a mat-button>
+            <a mat-button [routerLink]="['/car/detail', car.id, car.model]">
                 <mat-icon>search</mat-icon>
             </a>
         </td>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CarModel } from 'src/app/models/car.model';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  $obsCar?: Observable<CarModel>;
+
+  constructor(private servCar: CarService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id: number = this.route.snapshot.params.id;
+    this.$obsCar = this.servCar.getCarById(id);
   }
 
 }
