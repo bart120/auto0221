@@ -1,1 +1,20 @@
-<p>list works!</p>
+<h2>Voitures</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Modèle</th>
+        <th>Prix</th>
+        <th>Date</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let car of cars">
+        <td>{{car.model}}</td>
+        <td>{{car.price}}</td>
+        <td>{{car.dateOfCirculation}}</td>
+        <td>
+            <a mat-button>
+                <mat-icon>search</mat-icon>
+            </a>
+        </td>
+    </tr>
+</table>

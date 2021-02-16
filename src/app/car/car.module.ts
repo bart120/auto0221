@@ -4,6 +4,8 @@ import { ListComponent } from './list/list.component';
 import { AddComponent } from './add/add.component';
 import { DetailComponent } from './detail/detail.component';
 import { CarRoutingModule } from './routing-car.module';
+import { CarService } from '../services/car.service';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,11 @@ import { CarRoutingModule } from './routing-car.module';
   ],
   imports: [
     CommonModule,
-    CarRoutingModule
+    CarRoutingModule,
+    MaterialModule
+  ],
+  providers: [
+    CarService
   ]
 })
 export class CarModule { }

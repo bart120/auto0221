@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  urlMark: 'https://dev.inow.fr/formation/api/v1/marks'
+  urlMark: 'https://dev.inow.fr/formation/api/v1/marks',
+  urlCar: 'https://dev.inow.fr/formation/api/v1/cars'
 };
 
 /*
