@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  @ViewChild('password')
+  passwd?: ElementRef;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onLogin(email: string): void {
+    console.log(email);
+    console.log(this.passwd?.nativeElement.value);
   }
 
 }
