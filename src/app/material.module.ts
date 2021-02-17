@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     /*imports: [
@@ -28,7 +29,8 @@ import { MatSelectModule } from '@angular/material/select';
         MatInputModule,
         MatProgressSpinnerModule,
         MatDatepickerModule,
-        MatSelectModule
+        MatSelectModule,
+        MatSnackBarModule
     ],
 })
 export class MaterialModule { }

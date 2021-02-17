@@ -15,4 +15,17 @@ export class CarService {
     getCarById(id: number): Observable<CarModel> {
         return this.http.get<CarModel>(`${environment.urlCar}/${id}`);
     }
+
+    saveCar(car: CarModel): Observable<CarModel> {
+        car.price = +car.price;
+        if (car.id === 0) {
+            return this.http.post<CarModel>(environment.urlCar, car);
+        } else {
+            return this.http.put<CarModel>(`${environment.urlCar}/${car.id}`, car);
+        }
+    }
+
+    deleteCar(id: number): Observable<CarModel> {
+        return this.http.delete<CarModel>(`${environment.urlCar}/${id}`);
+    }
 }
