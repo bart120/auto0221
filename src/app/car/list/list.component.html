@@ -1,13 +1,20 @@
 <h2>Voitures</h2>
 
-<table class="table table-striped">
+<table class="table table-striped" *ngIf="$cars | async as cars">
     <tr>
+        <th>Marque</th>
         <th>Modèle</th>
         <th>Prix</th>
         <th>Date</th>
         <th></th>
     </tr>
     <tr *ngFor="let car of cars">
+        <td>
+            <span *ngIf="car.$mark | async as mark else loading">{{mark.name}}</span>
+            <ng-template #loading>
+                <mat-spinner></mat-spinner>
+            </ng-template>
+        </td>
         <td>{{car.model | uppercase}}</td>
         <td>{{car.price | currency:'€'}}</td>
         <td>{{car.dateOfCirculation | date:'short'}}</td>

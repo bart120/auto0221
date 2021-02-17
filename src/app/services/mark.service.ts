@@ -12,6 +12,10 @@ export class MarkService {
 
     constructor(private http: HttpClient) { }
 
+    getMarkById(id: number): Observable<MarkModel> {
+        return this.http.get<MarkModel>(`${environment.urlMark}/${id}`);
+    }
+
     getMarks(): Observable<Array<MarkModel>> {
 
 
