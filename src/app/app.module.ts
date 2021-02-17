@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import localeFr from '@angular/common/locales/fr';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import { MatNativeDateModule } from '@angular/material/core';
 
 registerLocaleData(localeFr, 'fr');
 registerLocaleData(localeEs, 'es');
@@ -25,7 +26,8 @@ registerLocaleData(localeEs, 'es');
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    MatNativeDateModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { DetailComponent } from './detail/detail.component';
 import { CarRoutingModule } from './routing-car.module';
 import { CarService } from '../services/car.service';
 import { MaterialModule } from '../material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     CarRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [
     CarService
