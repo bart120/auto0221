@@ -15,10 +15,17 @@
     <mat-icon>add</mat-icon>
     Ajouter
   </a>
-  <a routerLink="/auth/login" mat-button>
-    <mat-icon>locked_in</mat-icon>
-    Connexion
-  </a>
+  <div *ngIf="user else login">
+    Bonjour {{user?.name}}
+    <button mat-button (click)="onLogout()">Se déconnecter</button>
+  </div>
+  <ng-template #login>
+    <a routerLink="/auth/login" mat-button>
+      <mat-icon>locked_in</mat-icon>
+      Connexion
+    </a>
+  </ng-template>
+
 </mat-toolbar>
 <div class="container">
   <router-outlet></router-outlet>
