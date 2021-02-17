@@ -18,10 +18,10 @@ export class CarService {
 
     saveCar(car: CarModel): Observable<CarModel> {
         car.price = +car.price;
-        if (car.id === 0) {
-            return this.http.post<CarModel>(environment.urlCar, car);
-        } else {
+        if (car.id > 0) {
             return this.http.put<CarModel>(`${environment.urlCar}/${car.id}`, car);
+        } else {
+            return this.http.post<CarModel>(environment.urlCar, car);
         }
     }
 

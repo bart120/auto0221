@@ -22,6 +22,9 @@
             <a mat-button [routerLink]="['/car/detail', car.id, car.model]">
                 <mat-icon>search</mat-icon>
             </a>
+            <button mat-button (click)="onDelete(car.id)">
+                <mat-icon>delete_forever</mat-icon>
+            </button>
         </td>
     </tr>
 </table>
